@@ -11,7 +11,30 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ##Problem 1
 
-
+```{r problem 1}
+random_sample<-rnorm(10)
+###a random sample of size 10 from a standard Normal distribution
+logical_vector<-random_sample>0
+##a logical vector indicating whether elements of the sample are greater than 0
+char_vector<-rep("10",10)
+##a character vector of length 10
+factor_vector<-c("1","2","3","1","2","3","1","2","3","1")
+factor_vector<-as.factor(factor_vector)
+##a factor vector of length 10, with 3 different factor “levels”
+dataFrame_problem1<-data.frame(random_sample,logical_vector,char_vector,factor_vector)
+##take the mean of a variable in a dataframe
+library(tidyverse)
+mean(pull(dataFrame_problem1,1))
+##numeric can get mean
+mean(pull(dataFrame_problem1,2))
+##logical can get mean
+mean(pull(dataFrame_problem1,3))
+mean(as.numeric(pull(dataFrame_problem1,3)))
+##char cannot get mean
+mean(pull(dataFrame_problem1,4))
+mean(as.numeric(pull(dataFrame_problem1,4)))
+##char cannot get mean
+```
 
 
 ##Problem 2
