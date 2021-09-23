@@ -41,6 +41,17 @@ mean(as.numeric(pull(dataFrame_problem1,4)))
 
 
 ```{r problem 2}
- 
+install.packages("palmerpenguins")
+data("penguins", package = "palmerpenguins")
+summary(penguins_raw)
+str(penguins_raw)
+nrow(penguins_raw)
+ncol(penguins_raw)
+complete_penguins_raw<-penguins_raw[complete.cases(penguins_raw$`Flipper Length (mm)`),]
+mean(as.numeric(complete_penguins_raw$`Flipper Length (mm)`))
+penguins_raw$`Culmen Length (mm)`
+library(ggplot2)
+plot<-ggplot(penguins_raw, aes(x=as.numeric(`Flipper Length (mm)`), y=as.numeric(`Culmen Length (mm)`),color=Species))+ geom_point(shape=1) 
+ggsave("Problem2 penguins' data plot",device="pdf",plot)
 
 ```
