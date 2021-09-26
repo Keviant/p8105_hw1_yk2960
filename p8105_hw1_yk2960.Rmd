@@ -3,9 +3,10 @@ title: "p8105_hw1_yk2960"
 author: "Youyuan(Keviant) Kong"
 date: "2021/9/23"
 output:
-  word_document: default
-  html_document: default
-  pdf_document: default
+  github_document
+#  word_document: default
+#  html_document: default
+#  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
