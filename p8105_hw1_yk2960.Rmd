@@ -1,13 +1,16 @@
 ---
 title: "p8105_hw1_yk2960"
 author: "Youyuan(Keviant) Kong"
-date: "2021/9/22"
-output: html_document
+date: "2021/9/23"
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+#knitr::opts_chunk$set(echo = TRUE)
+##library("tinytex")
+##tinytex:: install_tinytex()
 ```
 ##Problem 1
 
@@ -41,7 +44,8 @@ mean(as.numeric(pull(dataFrame_problem1,4)))
 
 
 ```{r problem 2}
-install.packages("palmerpenguins")
+##install.packages("palmerpenguins")
+library(palmerpenguins)
 data("penguins", package = "palmerpenguins")
 summary(penguins_raw)
 str(penguins_raw)
@@ -52,6 +56,7 @@ mean(as.numeric(complete_penguins_raw$`Flipper Length (mm)`))
 penguins_raw$`Culmen Length (mm)`
 library(ggplot2)
 plot<-ggplot(penguins_raw, aes(x=as.numeric(`Flipper Length (mm)`), y=as.numeric(`Culmen Length (mm)`),color=Species))+ geom_point(shape=1) 
+plot
 ggsave("Problem2 penguins' data plot",device="pdf",plot)
-
 ```
+
