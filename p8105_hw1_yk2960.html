@@ -193,10 +193,10 @@ library(tidyverse)</code></pre>
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>mean(pull(dataFrame_problem1,1))</code></pre>
-<pre><code>## [1] 0.525116</code></pre>
+<pre><code>## [1] 0.07497051</code></pre>
 <pre class="r"><code>##numeric can get mean
 mean(pull(dataFrame_problem1,2))</code></pre>
-<pre><code>## [1] 0.7</code></pre>
+<pre><code>## [1] 0.6</code></pre>
 <pre class="r"><code>##logical can get mean
 mean(pull(dataFrame_problem1,3))</code></pre>
 <pre><code>## Warning in mean.default(pull(dataFrame_problem1, 3)): 参数不是数值也不是逻辑值：
