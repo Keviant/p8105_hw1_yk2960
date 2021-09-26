@@ -59,6 +59,6 @@ penguins_raw$`Culmen Length (mm)`
 library(ggplot2)
 plot<-ggplot(penguins_raw, aes(x=as.numeric(`Flipper Length (mm)`), y=as.numeric(`Culmen Length (mm)`),color=Species))+ geom_point(shape=1) 
 plot
-ggsave("Problem2 penguins' data plot",device="pdf",plot)
+ggsave("Problem2 penguins' data plot",device="png",plot)
 ```
 
